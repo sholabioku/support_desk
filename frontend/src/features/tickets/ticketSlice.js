@@ -13,7 +13,7 @@ const initialState = {
 
 // Create new ticket
 export const createTicket = createAsyncThunk(
-  'auth/register',
+  'tickets/create',
   async (ticketData, thunkAPI) => {
     try {
       const token = thunkAPI.getState().auth.user.token;
