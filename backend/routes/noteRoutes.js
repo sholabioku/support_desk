@@ -1,0 +1,10 @@
+// express router for notes
+const router = require('express').Router({ mergeParams: true });
+
+const { getNotes } = require('../controllers/noteController');
+
+const { protect } = require('../middleware/authMiddleware');
+
+router.route('/').get(protect, getNotes);
+
+module.exports = router;
